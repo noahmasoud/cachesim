@@ -1,0 +1,45 @@
+# Cache Simulator
+
+## Overview
+This program simulates the behavior of a **direct-mapped cache**. It takes in cache configuration parameters and a sequence of memory addresses, simulates memory accesses, and determines whether each access is a **HIT** or **MISS**. The results are logged in an output file, and cache performance statistics are displayed in the console.
+
+---
+
+## Features
+- **Direct-Mapped Cache**: Simulates a direct-mapped cache with configurable size.
+- **Debug Output**: Provides detailed logs of each memory access, including address, index, tag, and cache state.
+- **Hit and Miss Tracking**: Outputs HIT/MISS results for each memory access in an output file.
+- **Cache Statistics**: Displays hit rate and miss rate at the end of the simulation.
+
+---
+
+## Requirements
+- **C++ Compiler**: Supports C++11 or higher.
+- **Input File**: A text file containing memory addresses separated by spaces or newlines.
+
+---
+## Compilation
+To compile the program, use the following command:
+bash
+g++ -std=c++11 -o cache_sim cache_sim.cpp
+
+---
+
+## Execution
+- **Run**: ./cache_sim <mem_size> <cache_size> <access_file>
+- **Example**: ./cache_sim 16 4 memory_reference_file.txt
+
+---
+## Input File
+- **Example**: 1 3 5 1 3 1
+---
+
+## Execution
+- **Run**: ./cache_sim <mem_size> <cache_size> <access_file>
+- **Example**: ./cache_sim 16 4 memory_reference_file.txt
+---
+
+## Known Limitations
+- Only supports direct-mapped cache.
+- Miss classification (compulsory, capacity, conflict) is not implemented.
+
